@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue学习</title>
+    <style>
+    .active{
+        background-color: red;
+        height:20px;
+    }
+
+    .blue{
+        background-color: blue;
+        height:20px;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <h1>指令 ，过滤器 methods 选项使用 </h1>
+        <h1 v-text="msg"></h1>
+        <div v-html="html"></div>
+        <div v-bind:class="s">v-bind:class="s"</div>
+        <br>
+        <div :class="blue" >:class="blue"</div>
+        <br>
+        {{date}}
+            <br>
+        {{date | formatDate}}
+        <br>
+        <button v-on:click='count' v-text="countnum"></button>
+
+        <button @click='count' v-text="countnum"></button>
+    </div>
+
+
+
+    <script src="vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
